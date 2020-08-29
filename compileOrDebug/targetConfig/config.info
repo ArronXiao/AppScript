@@ -16,6 +16,12 @@ signKeyStoreFilePath=E:\my\sfDoc\总结类\反编译用的脚本\compileOrDebug\abc.keysto
 #sign文件keystore的别名
 signKeyStoreAlis=abc.keystore
 
+#sign文件keystore的密码
+signKsPass=123456
+
+#sign文件signdeKey的密码
+signKeyPass=123456
+
 
 #输出的apk的文件路径
 outputApkFilePath=E:\netbaseWork\analysis\luanshiwangzhe\out\dist\repack\v2.apk

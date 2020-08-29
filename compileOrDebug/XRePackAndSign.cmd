@@ -17,7 +17,8 @@ set key_v2SignBatPath="v2SignBatPath"
 set key_signKeyStoreFilePath="signKeyStoreFilePath"
 set key_outputApkFilePath="outputApkFilePath"
 set key_signKeyStoreAlis="signKeyStoreAlis"
-set key_originalApkPath="originalApkPath"
+set key_signKsPass="signKsPass"
+set key_signKeyPass="signKeyPass"
 
 for /f "eol=# tokens=1,2 delims==" %%i in (%targetConfigPath%) do (
   if "%%i"==%key_decompilerOutDir% set value_decompilerOUtDir=%%j
@@ -27,6 +28,8 @@ for /f "eol=# tokens=1,2 delims==" %%i in (%targetConfigPath%) do (
   if "%%i"==%key_outputApkFilePath% set value_outputApkFilePath=%%j
   if "%%i"==%key_signKeyStoreAlis% set value_signKeyStoreAlis=%%j
   if "%%i"==%key_originalApkPath% set value_originalApkPath=%%j
+  if "%%i"==%key_signKsPass% set value_signKsPass=%%j
+  if "%%i"==%key_signKeyPass% set value_signKeyPass=%%j
  )
 
 ::调用重新打包的函数 
@@ -49,5 +52,6 @@ for /F %%i in ('Dir %generate_apk_dir% /B /A:-D') do (
 echo generate_apk_file_path is %generate_apk_file_path%
 
 :: 调用重新签名的函数
-call .\v2sign.cmd %value_v2SignBatPath% %value_signKeyStoreFilePath% %value_signKeyStoreAlis% %value_outputApkFilePath% %generate_apk_file_path%
+call .\v2sign.cmd %value_v2SignBatPath% %value_signKeyStoreFilePath% %value_signKeyStoreAlis% %value_signKsPass% %value_signKeyPass%  %value_outputApkFilePath% %generate_apk_file_path%
 
+echo reSign apk file path is %value_outputApkFilePath%
