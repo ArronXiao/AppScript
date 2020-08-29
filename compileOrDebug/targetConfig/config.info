@@ -11,7 +11,7 @@ apktoolJarPath=E:\my\sfDoc\tool\apktool_2.4.1.jar
 v2SignBatPath=C:\Users\xiaojingzhu\AppData\Local\Android\Sdk\build-tools\28.0.3\apksigner.bat
 
 #sign文件keystore的存储路径
-signKeyStoreFilePath=E:\my\sfDoc\总结类\反编译用的脚本\abc.keystore
+signKeyStoreFilePath=E:\my\sfDoc\总结类\反编译用的脚本\compileOrDebug\abc.keystore
 
 #sign文件keystore的别名
 signKeyStoreAlis=abc.keystore

@@ -30,7 +30,7 @@ for /f "eol=# tokens=1,2 delims==" %%i in (%targetConfigPath%) do (
  )
 
 ::调用重新打包的函数 
-:: call .\repackcmd.cmd %value_apktoolJarPath% %value_decompilerOUtDir%
+call .\repackcmd.cmd %value_apktoolJarPath% %value_decompilerOUtDir%
 :: call .\repackcmd.cmd %value_apktoolJarPath% %value_decompilerOUtDir%
 
 set generate_apk_dir=%value_decompilerOUtDir%\dist
